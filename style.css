@@ -5,18 +5,30 @@ body {
 }
 
 .tab-content {
-    display: none;
+    position: relative; /* Changed to relative for stacking */
+    width: 100%; /* Ensure full width */
+    opacity: 0;
+    transform: translateY(20px); /* Start position for slide effect */
+    visibility: hidden;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out, visibility 0s linear 1s;
+    z-index: 1; /* Set z-index for stacking */
 }
 
-.active {
-    display: block;
+/* Active tab content will fade and slide into view */
+.tab-content.active {
+    opacity: 1;
+    transform: translateY(0); /* Reset position */
+    visibility: visible;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    z-index: 2; /* Ensure active tab is on top */
 }
 
 footer {
     border-top: 1px solid #ddd;
+    position: relative; /* Keep footer position relative to avoid overlap issues */
 }
