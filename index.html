@@ -13,50 +13,9 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        .tab-container {
-            position: relative; /* Added container for tab content */
-            width: 100%; /* Ensure full width */
-        }
-
-        .tab-content {
-            position: absolute; /* Use absolute to stack them */
-            width: 100%; /* Ensure full width */
-            opacity: 0;
-            transform: translateY(20px); /* Start position for slide effect */
-            visibility: hidden;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 20px;
-            transition: opacity 1s ease-in-out, transform 1s ease-in-out, visibility 0s linear 1s;
-            z-index: 1; /* Set z-index for stacking */
-        }
-
-        /* Active tab content will fade and slide into view */
-        .tab-content.active {
-            opacity: 1;
-            transform: translateY(0); /* Reset position */
-            visibility: visible;
-            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-            z-index: 2; /* Ensure active tab is on top */
-        }
-
-        footer {
-            border-top: 1px solid #ddd;
-            position: relative; /* Keep footer position relative to avoid overlap issues */
-        }
-    </style>
 </head>
 <body>
-    <header class="text-center bg-dark text-white py-4 mb-4">
+    <header class="text-center py-4 mb-4">
         <h1>Tarun Thomas</h1>
         <p>Toronto, ON | <a href="mailto:tarunthomas03@gmail.com" target="_blank" class="text-white">tarunthomas03@gmail.com</a> | 437-518-6696</p>
         <p>
@@ -75,112 +34,111 @@
             <button class="btn btn-primary" onclick="openTab('education')">Certificates and Education</button>
         </div>
 
-        <!-- Tab Content Container -->
-        <div class="tab-container">
-            <div id="objective" class="tab-content active">
-                <h2><strong>Objective</strong></h2>
-                <p>“Dedicated and results-driven professional seeking a position in <strong>Full-stack development, Database Administration or Data Analysis,</strong> where I can leverage my strong technical skills in Web Development, Data Science, communication abilities, and problem-solving expertise to manage and optimize databases, as well as analyze and interpret complex data. Eager to contribute to data management, performance tuning, system security, and data-driven insights while providing exceptional support to clients and stakeholders.”</p>
-            </div>
+        <!-- Tab Content -->
+        <div id="objective" class="tab-content active">
+            <h2><strong>Objective</strong></h2>
+            <p>
+                “Dedicated and results-driven professional seeking a position in <strong>Full-stack development, Database Administration or Data Analysis,</strong> where I can leverage my strong technical skills in Web Development, Data Science, communication abilities, and problem-solving expertise to manage and optimize databases, as well as analyze and interpret complex data. Eager to contribute to data management, performance tuning, system security, and data-driven insights while providing exceptional support to clients and stakeholders.”
+            </p>
+        </div>
 
-            <div id="profile" class="tab-content">
-                <section>
-                    <h2><strong>Profile Summary</strong></h2>
+        <div id="profile" class="tab-content">
+            <section>
+                <h2><strong>Profile Summary</strong></h2>
+                <ul>
+                    <li><strong>Programming Languages:</strong> Proficient in Python, C++, JavaScript, CSS, and HTML for full-stack development.</li>
+                    <li><strong>Web Development Frameworks:</strong> Experienced in using Bootstrap for responsive web design and enhancing user interfaces.</li>
+                    <li><strong>Database Management:</strong> Skilled in SQL, Oracle, MongoDB, and MySQL for handling complex databases.</li>
+                    <li><strong>Backend Development:</strong> Proficient in Node.js for building scalable server-side applications and services.</li>
+                    <li><strong>RESTful Services & API Design:</strong> Knowledgeable in designing and implementing RESTful APIs, ensuring efficient communication between client and server.</li>
+                    <li><strong>Performance Tuning:</strong> Expertise in query optimization, indexing, partitioning, and memory management to improve database performance.</li>
+                    <li><strong>Project Management:</strong> Proficient in using MS Project and JIRA for effective planning and management of projects.</li>
+                    <li><strong>Version Control:</strong> Experienced with Git and GitHub for efficient code management and collaboration.</li>
+                    <li><strong>Data Visualization & Modeling:</strong> Proficient with Power BI and Visual Paradigm for creating data models and visualizing complex datasets.</li>
+                    <li><strong>Data Security:</strong> Implementing backup, recovery strategies, encryption, and access control to ensure data security.</li>
+                    <li><strong>Database Design:</strong> Strong knowledge of normalization, ER diagrams, schema design, and stored procedures.</li>
+                    <li><strong>Operating Systems:</strong> Familiar with Linux/Unix environments for software development and server management.</li>
+                    <li><strong>Automation:</strong> Automated database tasks using Python, Command Prompt, and PowerShell.</li>
+                    <li><strong>Collaboration:</strong> Strong communication skills, experienced in working with cross-functional teams to meet organizational objectives.</li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="projects" class="tab-content">
+            <h2><strong>Projects</strong></h2>
+            <div>
+                <h3>Airline Reservation System</h3>
+                <p>
+                    <strong>Database Design and REST API Implementation</strong>
                     <ul>
-                        <li><strong>Programming Languages:</strong> Proficient in Python, C++, JavaScript, CSS, and HTML for full-stack development.</li>
-                        <li><strong>Web Development Frameworks:</strong> Experienced in using Bootstrap for responsive web design and enhancing user interfaces.</li>
-                        <li><strong>Database Management:</strong> Skilled in SQL, Oracle, MongoDB, and MySQL for handling complex databases.</li>
-                        <li><strong>Backend Development:</strong> Proficient in Node.js for building scalable server-side applications and services.</li>
-                        <li><strong>RESTful Services & API Design:</strong> Knowledgeable in designing and implementing RESTful APIs, ensuring efficient communication between client and server.</li>
-                        <li><strong>Performance Tuning:</strong> Expertise in query optimization, indexing, partitioning, and memory management to improve database performance.</li>
-                        <li><strong>Project Management:</strong> Proficient in using MS Project and JIRA for effective planning and management of projects.</li>
-                        <li><strong>Version Control:</strong> Experienced with Git and GitHub for efficient code management and collaboration.</li>
-                        <li><strong>Data Visualization & Modeling:</strong> Proficient with Power BI and Visual Paradigm for creating data models and visualizing complex datasets.</li>
-                        <li><strong>Data Security:</strong> Implementing backup, recovery strategies, encryption, and access control to ensure data security.</li>
-                        <li><strong>Database Design:</strong> Strong knowledge of normalization, ER diagrams, schema design, and stored procedures.</li>
-                        <li><strong>Operating Systems:</strong> Familiar with Linux/Unix environments for software development and server management.</li>
-                        <li><strong>Automation:</strong> Automated database tasks using Python, Command Prompt, and PowerShell.</li>
-                        <li><strong>Collaboration:</strong> Strong communication skills, experienced in working with cross-functional teams to meet organizational objectives.</li>
+                        <li>Designed a relational database for an airline reservation system, converting tables to Third Normal Form (3NF) and creating an Entity Relationship Diagram (ERD).</li>
+                        <li>Developed SQL queries for table creation, constraints, and sample data population, ensuring data integrity.</li>
+                        <li>Built and deployed RESTful API endpoints using Node.js and Express.js for flight, booking, and user management.</li>
                     </ul>
-                </section>
+                </p>
             </div>
-
-            <div id="projects" class="tab-content">
-                <h2><strong>Projects</strong></h2>
-                <div>
-                    <h3>Airline Reservation System</h3>
-                    <p><strong>Database Design and REST API Implementation</strong>
-                        <ul>
-                            <li>Designed a relational database for an airline reservation system, converting tables to Third Normal Form (3NF) and creating an Entity Relationship Diagram (ERD).</li>
-                            <li>Developed SQL queries for table creation, constraints, and sample data population, ensuring data integrity.</li>
-                            <li>Built and deployed RESTful API endpoints using Node.js and Express.js for flight, booking, and user management.</li>
-                        </ul>
-                    </p>
-                </div>
-                <div>
-                    <h3>Full-Stack Application</h3>
-                    <p><strong>With REST API and Cloud Deployment</strong>
-                        <ul>
-                            <li>Developed a full-stack web application with CRUD operations for user and product management.</li>
-                            <li>Implemented secure user authentication and refactored routes into modular router modules.</li>
-                            <li>Deployed the application to the cloud, utilizing technologies like Node.js, Express.js, and Postman.</li>
-                        </ul>
-                    </p>
-                </div>
-                <div>
-                    <h3>Sorted Linked List</h3>
-                    <p><strong>Python-based Data Structure</strong>
-                        <ul>
-                            <li>Developed a sorted linked list using custom Node and SortedLinkedList classes to manage a dynamically ordered collection.</li>
-                            <li>Implemented key methods such as insert, remove, and is_present, enabling efficient element insertion, removal, and lookup.</li>
-                            <li>Demonstrated data structure concepts with opportunities for enhancements, including traversal and unit testing.</li>
-                        </ul>
-                    </p>
-                </div>
+            <div>
+                <h3>Full-Stack Application</h3>
+                <p>
+                    <strong>With REST API and Cloud Deployment</strong>
+                    <ul>
+                        <li>Developed a full-stack web application with CRUD operations for user and product management.</li>
+                        <li>Implemented secure user authentication and refactored routes into modular router modules.</li>
+                        <li>Deployed the application to the cloud, utilizing technologies like Node.js, Express.js, and Postman.</li>
+                    </ul>
+                </p>
             </div>
-
-            <div id="experience" class="tab-content">
-                <h2><strong>Professional Experience</strong></h2>
-                <h3>Information and Support Staff – Seneca College, Toronto</h3>
-                <p>2023 - Present</p>
-                <ul>
-                    <li>Documented customer interactions, transactions, inquiries, and feedback in the company’s database or customer relationship management (CRM) system, ensuring data accuracy and reliability.</li>
-                    <li>Managed challenging or emotional customer interactions with professionalism and empathy, maintaining positive relationships and delivering excellent customer service.</li>
-                    <li>Assisted students and staff with sign-ups and registration, efficiently entering and maintaining data in student information systems while ensuring data integrity.</li>
-                </ul>
-            </div>
-
-            <div id="education" class="tab-content">
-                <h2><strong>Education</strong></h2>
-                <h3>Computer Programming</h3>
-                <p><strong>Seneca College, Toronto</strong><br> Gained proficiency in programming languages and full-stack development, focusing on database management and web applications.</p>
-                <h3><strong>Certifications</strong></h3>
-                <ul>
-                    <li><strong>SQL for Data Analysis</strong><br> Issuing Organization: LinkedIn Learning | 2024</li>
-                    <li><strong>Power BI for Data Analysts</strong><br> Issuing Organization: Microsoft Press | 2024</li>
-                </ul>
+            <div>
+                <h3>Sorted Linked List</h3>
+                <p>
+                    <strong>Python-based Data Structure</strong>
+                    <ul>
+                        <li>Developed a sorted linked list using custom Node and SortedLinkedList classes to manage a dynamically ordered collection.</li>
+                        <li>Implemented key methods such as insert, remove, and is_present, enabling efficient element insertion, removal, and lookup.</li>
+                        <li>Demonstrated data structure concepts with opportunities for enhancements, including traversal and unit testing.</li>
+                    </ul>
+                </p>
             </div>
         </div>
+
+        <div id="experience" class="tab-content">
+            <h2><strong>Professional Experience</strong></h2>
+            <h3>Information and Support Staff – Seneca College, Toronto</h3>
+            <p>2023 - Present</p>
+            <ul>
+                <li>Documented customer interactions, transactions, inquiries, and feedback in the company’s database or customer relationship management (CRM) system, ensuring data accuracy and reliability.</li>
+                <li>Managed challenging or emotional customer interactions with professionalism and empathy, maintaining positive relationships and delivering excellent customer service.</li>
+                <li>Assisted students and staff with sign-ups and registration, efficiently entering and maintaining data in student information systems while ensuring data integrity.</li>
+            </ul>
+        </div>
+
+        <div id="education" class="tab-content">
+            <h2><strong>Education</strong></h2>
+            <h3>Computer Programming</h3>
+            <p>
+                <strong>Seneca College, Toronto</strong><br>
+                Gained proficiency in programming languages and full-stack development, focusing on database management and web applications.
+            </p>
+            
+            <h3><strong>Certifications</strong></h3>
+            <ul>
+                <li><strong>SQL for Data Analysis</strong><br> Issuing Organization: LinkedIn Learning | 2024</li>
+                <li><strong>Power BI for Data Analysts</strong><br> Issuing Organization: Microsoft Press | 2024</li>
+            </ul>
+        </div>
+        
     </div>
 
-    <footer class="text-center py-4">
-        <p>&copy; 2024 Tarun Thomas. All Rights Reserved.</p>
+    <footer class="text-center bg-white py-3 mt-4">
+        <p>&copy; 2024 Tarun Thomas. All rights reserved.</p>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        function openTab(tabName) {
-            // Get all elements with class "tab-content" and hide them
-            var contents = document.getElementsByClassName("tab-content");
-            for (var i = 0; i < contents.length; i++) {
-                contents[i].classList.remove("active");
-            }
-
-            // Show the current tab
-            document.getElementById(tabName).classList.add("active");
-        }
-    </script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
