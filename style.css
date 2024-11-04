@@ -2,6 +2,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    margin: 0;
+    padding: 0;
+    max-width: 1200px; /* Set maximum width */
+    margin: auto; /* Center the body */
 }
 
 header {
@@ -26,6 +30,7 @@ header {
 /* Tab content */
 .tab-content {
     display: none; /* Hide tab content by default */
+    padding: 20px; /* Padding for content */
 }
 
 .tab-content.active {
@@ -41,4 +46,21 @@ header {
 footer {
     background-color: #343a40;
     color: white;
+}
+
+/* Flexbox for button centering */
+.text-center.mb-4 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Reduce font size on smaller screens */
+    }
+    .tab-content {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
 }
