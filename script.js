@@ -5,7 +5,7 @@ function openTab(tabName) {
     tabcontent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].classList.remove("active");
-        tabcontent[i].style.opacity = "0"; // Ensure it's hidden
+        tabcontent[i].style.opacity = "0"; // Fade out
         tabcontent[i].style.visibility = "hidden"; // Make invisible
     }
 
