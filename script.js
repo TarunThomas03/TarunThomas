@@ -14,7 +14,8 @@ function openTab(tabName) {
     }
 
     // Show the selected tab and add "active" class to the corresponding button
-    document.getElementById(tabName).classList.add("active");
+    const selectedTab = document.getElementById(tabName);
+    selectedTab.classList.add("active");
     document.querySelector(`button[onclick="openTab('${tabName}')"]`).classList.add("active");
 }
 
