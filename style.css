@@ -9,58 +9,67 @@ body {
 }
 
 header {
-    background-color: #343a40; /* Dark grey background */
-    color: white; /* White text */
+    background-color: #343a40; /* Dark gray for header */
+    color: #fff;
     padding: 20px;
-    transition: all 0.5s ease-in-out; /* Animation on hover or other interactions */
-    animation: fadeIn 1s ease-in-out; /* Add animation for when it loads */
+    border-radius: 5px;
+    animation: fadeIn 1s; /* Animation for header */
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
-/* Tab content */
+h2 {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+}
+
+h3 {
+    margin-top: 1.2rem;
+    font-size: 1.5rem;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .tab-content {
-    display: none; /* Hide tab content by default */
-    padding: 20px; /* Padding for content */
+    display: none;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .tab-content.active {
-    display: block; /* Show active tab content */
+    display: block; /* Only show active tab */
 }
 
-/* Button styles */
-.btn {
-    margin: 5px;
-}
-
-/* Footer styles */
 footer {
-    background-color: #343a40;
-    color: white;
+    background-color: #fff;
+    color: #333;
+    padding: 15px;
+    border-radius: 5px;
 }
 
-/* Flexbox for button centering */
-.text-center.mb-4 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allow buttons to wrap */
+.btn-primary {
+    margin: 0 5px;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem; /* Reduce font size on smaller screens */
+/* Animation for the header */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-    .tab-content {
-        padding: 10px; /* Reduce padding on smaller screens */
+    to {
+        opacity: 1;
     }
 }
