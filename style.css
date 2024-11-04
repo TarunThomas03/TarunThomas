@@ -7,13 +7,39 @@ body {
 header {
     background-color: #343a40; /* Dark gray for header */
     color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+}
+
+h3 {
+    margin-top: 1.2rem;
+    font-size: 1.5rem;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .tab-content {
     display: none; /* Hide all tab content by default */
-    opacity: 0;
+    opacity: 0; /* Start with zero opacity */
     transform: translateY(20px); /* Start position for slide effect */
-    transition: opacity 1s ease, transform 1s ease; /* Transition properties */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Transition properties for smoothness */
 }
 
 .tab-content.active {
@@ -30,7 +56,6 @@ footer {
     margin-top: 20px; /* Ensure space between footer and content */
 }
 
-/* Optional: Styles for buttons */
 .btn-primary {
     margin: 0 5px;
 }
