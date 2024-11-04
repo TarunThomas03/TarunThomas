@@ -1,0 +1,22 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.tab-content {
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.active {
+    display: block;
+}
+
+footer {
+    border-top: 1px solid #ddd;
+}
