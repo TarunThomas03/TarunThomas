@@ -41,7 +41,7 @@ a:hover {
 }
 
 .tab-content {
-    position: relative; /* Changed to relative positioning */
+    position: relative; /* Keep it relative for proper document flow */
     width: 100%; /* Ensure full width */
     opacity: 0;
     transform: translateY(20px); /* Start position for slide effect */
@@ -49,7 +49,7 @@ a:hover {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Space between tab content and footer */
     transition: opacity 1s ease, transform 1s ease; /* Set transition properties */
 }
 
@@ -58,7 +58,6 @@ a:hover {
     opacity: 1;
     transform: translateY(0); /* Reset position */
     visibility: visible; /* Make visible */
-    transition: opacity 1s ease, transform 1s ease; /* Consistent transition time */
 }
 
 footer {
@@ -66,8 +65,9 @@ footer {
     color: #333;
     padding: 15px;
     border-radius: 5px;
-    margin-top: 20px; /* Add margin to separate it from the content above */
+    margin-top: 20px; /* Ensure space between footer and content */
     position: relative; /* Ensure it stays in the normal document flow */
+    clear: both; /* Clear any floating elements above */
 }
 
 .btn-primary {

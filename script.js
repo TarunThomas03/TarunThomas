@@ -4,7 +4,8 @@ function openTab(tabName) {
     // Hide all tab contents
     tabcontent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.opacity = "0"; // Start fading out
+        tabcontent[i].classList.remove("active");
+        tabcontent[i].style.opacity = "0"; // Fade out
         tabcontent[i].style.visibility = "hidden"; // Make invisible
     }
 
@@ -14,22 +15,16 @@ function openTab(tabName) {
         tabbuttons[i].classList.remove("active");
     }
 
-    // Show the selected tab after a short delay
+    // Show the selected tab
+    const selectedTab = document.getElementById(tabName);
+    selectedTab.classList.add("active");
+    selectedTab.style.visibility = "visible"; // Make visible
     setTimeout(() => {
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].classList.remove("active");
-        }
+        selectedTab.style.opacity = "1"; // Fade in
+    }, 10); // Small delay to allow for visibility change
 
-        const selectedTab = document.getElementById(tabName);
-        selectedTab.classList.add("active");
-        selectedTab.style.visibility = "visible"; // Make visible
-        setTimeout(() => {
-            selectedTab.style.opacity = "1"; // Fade in
-        }, 10); // Small delay to allow for visibility change
-
-        // Add "active" class to the corresponding button
-        document.querySelector(`button[onclick="openTab('${tabName}')"]`).classList.add("active");
-    }, 1000); // Wait for the fade-out to complete before showing the new tab
+    // Add "active" class to the corresponding button
+    document.querySelector(`button[onclick="openTab('${tabName}')"]`).classList.add("active");
 }
 
 // Show the default tab on page load
