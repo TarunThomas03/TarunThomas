@@ -5,6 +5,8 @@ function openTab(tabName) {
     tabcontent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].classList.remove("active");
+        tabcontent[i].style.opacity = "0"; // Ensure it's hidden
+        tabcontent[i].style.visibility = "hidden"; // Make invisible
     }
 
     // Remove "active" class from all buttons
@@ -13,9 +15,15 @@ function openTab(tabName) {
         tabbuttons[i].classList.remove("active");
     }
 
-    // Show the selected tab and add "active" class to the corresponding button
+    // Show the selected tab
     const selectedTab = document.getElementById(tabName);
     selectedTab.classList.add("active");
+    selectedTab.style.visibility = "visible"; // Make visible
+    setTimeout(() => {
+        selectedTab.style.opacity = "1"; // Fade in
+    }, 10); // Small delay to allow for visibility change
+
+    // Add "active" class to the corresponding button
     document.querySelector(`button[onclick="openTab('${tabName}')"]`).classList.add("active");
 }
 
