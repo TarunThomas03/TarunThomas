@@ -21,4 +21,9 @@ function openTab(tabName) {
 // Show the default tab on page load
 document.addEventListener("DOMContentLoaded", function() {
     openTab('objective');
+    
+    // Add the visible class to the header after a short delay
+    setTimeout(function() {
+        document.querySelector('header').classList.add('visible');
+    }, 100); // Adjust delay as needed (100ms here)
 });

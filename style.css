@@ -4,8 +4,23 @@ body {
     color: #333;
 }
 
+header {
+    background-color: #007bff; /* Light blue */
+    color: white; /* Keep text white for contrast */
+    padding: 20px;
+    text-align: center;
+    opacity: 0; /* Start invisible */
+    transform: translateY(-20px); /* Start position */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animation properties */
+}
+
+header.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Final position */
+}
+
 .tab-content {
-    position: relative; /* Changed to relative for stacking */
+    position: absolute; /* Position the tab content absolutely */
     width: 100%; /* Ensure full width */
     opacity: 0;
     transform: translateY(20px); /* Start position for slide effect */
@@ -15,8 +30,7 @@ body {
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out, visibility 0s linear 1s;
-    z-index: 1; /* Set z-index for stacking */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0s linear 0.5s;
 }
 
 /* Active tab content will fade and slide into view */
@@ -24,8 +38,7 @@ body {
     opacity: 1;
     transform: translateY(0); /* Reset position */
     visibility: visible;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    z-index: 2; /* Ensure active tab is on top */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 footer {
