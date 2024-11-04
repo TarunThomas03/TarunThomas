@@ -50,14 +50,14 @@ a:hover {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    transition: opacity 1s ease, transform 1s ease; /* Updated duration to 1s */
+    transition: opacity 1s ease, transform 1s ease; /* Set transition properties */
 }
 
 /* Active tab content will fade and slide into view */
 .tab-content.active {
     opacity: 1;
     transform: translateY(0); /* Reset position */
-    visibility: visible;
+    visibility: visible; /* Make visible */
     transition: opacity 1s ease, transform 1s ease; /* Consistent transition time */
 }
 
