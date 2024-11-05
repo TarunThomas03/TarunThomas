@@ -1,18 +1,12 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background-color: #343a40; /* Dark gray for header */
-    color: #fff;
-    padding: 20px;
-    border-radius: 5px;
+    background-color: #343a40; /* Dark gray background */
+    color: #fff; /* White text color */
+    font-family: Arial, sans-serif; /* Font style */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding around the body */
 }
 
 h1 {
-    margin: 0;
     font-size: 2.5rem;
 }
 
@@ -27,7 +21,7 @@ h3 {
 }
 
 a {
-    color: #007bff;
+    color: #007bff; /* Link color */
     text-decoration: none;
 }
 
@@ -35,27 +29,35 @@ a:hover {
     text-decoration: underline;
 }
 
+.tabs {
+    margin-bottom: 20px; /* Space below the tabs */
+}
+
+.tab-link {
+    background-color: #007bff; /* Tab button color */
+    border: none; /* Remove border */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 5px; /* Space between tabs */
+}
+
+.tab-link.active {
+    background-color: #0056b3; /* Darker blue for active tab */
+}
+
 .tab-content {
-    display: none; /* Hide all tab content by default */
-    opacity: 0; /* Start with zero opacity */
-    transform: translateY(20px); /* Start position for slide effect */
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Transition properties for smoothness */
+    display: none; /* Hide tab contents by default */
 }
 
 .tab-content.active {
-    display: block; /* Show active tab */
-    opacity: 1; /* Fade in */
-    transform: translateY(0); /* Slide up into view */
+    display: block; /* Show active tab content */
 }
 
-footer {
-    background-color: #fff;
-    color: #333;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 20px; /* Ensure space between footer and content */
-}
-
-.btn-primary {
-    margin: 0 5px;
+.tab-box {
+    background-color: #495057; /* Light gray background for content */
+    padding: 15px; /* Padding around content */
+    border-radius: 5px; /* Rounded corners for the box */
+    margin-top: 10px; /* Space above the box */
 }

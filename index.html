@@ -8,14 +8,33 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Custom CSS -->
-    <link href="style.css" rel="stylesheet">
-    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .tab-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+            opacity: 1;
+        }
+        header, footer {
+            background-color: #343a40; /* Dark background for header and footer */
+            color: white;
+        }
+        h1 {
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 <body>
-    <header class="text-center bg-dark text-white py-4 mb-4">
+    <header class="text-center py-4 mb-4">
         <h1>Tarun Thomas</h1>
         <p>Toronto, ON | <a href="mailto:tarunthomas03@gmail.com" target="_blank" class="text-white">tarunthomas03@gmail.com</a> | 437-518-6696</p>
         <p>
@@ -74,6 +93,16 @@
                         <li>Designed a relational database for an airline reservation system, converting tables to Third Normal Form (3NF) and creating an Entity Relationship Diagram (ERD).</li>
                         <li>Developed SQL queries for table creation, constraints, and sample data population, ensuring data integrity.</li>
                         <li>Built and deployed RESTful API endpoints using Node.js and Express.js for flight, booking, and user management.</li>
+                    </ul>
+                </p>
+            </div>
+            <div>
+                <h3>Data Visualization Dashboard</h3>
+                <p>
+                    <strong>Data Analysis and Reporting</strong>
+                    <ul>
+                        <li>Created a dashboard using Power BI to visualize sales data, providing insights on sales trends and performance metrics.</li>
+                        <li>Developed interactive reports, enabling stakeholders to explore data in real-time.</li>
                     </ul>
                 </p>
             </div>
@@ -137,8 +166,23 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+
+    <script>
+        function openTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+                content.style.display = 'none'; // Ensure hidden before fading out
+            });
+            
+            // Show the selected tab
+            const selectedTab = document.getElementById(tabName);
+            selectedTab.style.display = 'block'; // Show the selected tab first
+            setTimeout(() => {
+                selectedTab.classList.add('active'); // Fade in the selected tab
+            }, 10);
+        }
+    </script>
 </body>
 </html>
